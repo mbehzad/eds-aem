@@ -12,7 +12,12 @@
         "id": "foo",
         "title": "Foo",
         "event": "foo"
-      }
+      },
+      {
+        "id": "bar",
+        "title": "Bar",
+        "url": "/tools/sidekick/bar.html"
+      },
     ]
   }
   
