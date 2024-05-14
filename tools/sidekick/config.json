@@ -21,7 +21,8 @@
     ],
     "specialViews": [{
         "title": "bla", 
-        "viewer": "/tools/sidekick/bar.html"
+        "viewer": "/tools/sidekick/bar.html",
+        "path": "**.json"
     }]
   }
   
