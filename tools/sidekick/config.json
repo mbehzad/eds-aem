@@ -3,8 +3,7 @@
     "plugins": [
       {
         "id": "library",
-        "title": "Library",
-        "environments": ["edit"],
+        "title": "Library", 
         "url": "/tools/sidekick/library.html",
         "includePaths": ["**.docx**"]
       },
