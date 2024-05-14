@@ -17,13 +17,11 @@
         "id": "bar",
         "title": "Bar",
         "url": "/tools/sidekick/bar.html"
-      },
-      {
-        "specialViews": [{
-          "title": "bla", 
-          "viewer": "/tools/sidekick/bar.html"
-        }]
       }
-    ]
+    ],
+    "specialViews": [{
+        "title": "bla", 
+        "viewer": "/tools/sidekick/bar.html"
+    }]
   }
   
