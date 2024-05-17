@@ -1,2 +1,4 @@
 mountpoints:
   /: https://drive.google.com/drive/u/0/folders/1hqgwMvB-iXQxM4q2kDYC15WzrC1jOE9P
+folders:
+  /products: /README.md
