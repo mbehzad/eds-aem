@@ -1,4 +1,5 @@
 mountpoints:
   /: https://drive.google.com/drive/u/0/folders/1hqgwMvB-iXQxM4q2kDYC15WzrC1jOE9P
+  /v: https://adobe.sharepoint.com/sites/HelixProjects/Shared%20Documents/sites/VolvoGroup/vg-volvotrucks-us
 folders:
   /products: /README.md
