@@ -4,6 +4,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: startsWith(github.ref_name, "feature")
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
@@ -12,6 +13,6 @@ jobs:
           node-version: 20
       - run: |
           echo "ref name: ${{ github.ref_name }}"
-          echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          
 
 
