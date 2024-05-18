@@ -10,5 +10,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
-    - run: echo 'ref name: ${{ github.ref_name }}'
-    - run: echo 'GITHUB_REF_NAME: $GITHUB_REF_NAME'
+    run: |
+        echo "ref name: ${{ github.ref_name }}"
+        echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
+
