@@ -13,6 +13,7 @@ jobs:
           node-version: 20
       - run: |
           echo "ref name: ${{ github.ref_name }}"
+          echo "whyyyyyyyyy"
           
 
 
