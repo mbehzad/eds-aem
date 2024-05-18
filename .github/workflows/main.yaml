@@ -11,6 +11,5 @@ jobs:
       with:
         node-version: 20
     run: |
-        echo "ref name: ${{ github.ref_name }}"
-        echo "GITHUB_REF_NAME: $GITHUB_REF_NAME"
+        echo "a"
 
