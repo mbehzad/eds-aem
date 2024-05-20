@@ -3,14 +3,17 @@ name: cleanup
 on:
   delete:
     # when a non hlx branch was deleted
-    branches:
-      - '!hlx/**'
+    branches-ignore:
+      - 'hlx/**'
 
 jobs:
   delete-up-hlx-branch:
     permissions:
       contents: write
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - name: Log
         run: echo "Clean up for branch ${{ github.event.ref }}"
+
+      - name: delete
+        run: git push origin --delete hlx/${{ github.event.ref }}
