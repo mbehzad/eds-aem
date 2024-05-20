@@ -111,6 +111,7 @@ jobs:
         run: |
           git config --global user.name "EDS CI/CD"
           git config --global user.email "eds-ci@diva-e.com"
+          git config --global --add push.autoSetupRemote true
 
       - name: Add dist
         run: |
