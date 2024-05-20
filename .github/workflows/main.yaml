@@ -1,5 +1,10 @@
 name: Build
-on: push
+on: 
+  push:
+    # only branch pushes, not tags
+    # ignore hlx branches
+    branches-ignore:
+      - 'hlx/**'
 
 jobs:
   build:
