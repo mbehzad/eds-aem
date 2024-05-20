@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ !startsWith(github.ref_name, 'feature/') }}
+    if: ${{ ! startsWith(github.ref_name, 'feature/') }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
