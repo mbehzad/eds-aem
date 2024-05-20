@@ -1,10 +1,16 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    # only branch pushes, not tags
+    # ignore hlx branches
+    branches-ignore:
+      - 'hlx/**'
+
 
 jobs:
   echo:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
@@ -19,7 +25,6 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    if: ${{ startsWith(github.ref_name, 'feature/part1') }}
     steps:
       - uses: actions/checkout@v4
       - name: one
@@ -31,17 +36,17 @@ jobs:
         run: |
           git config --global --add push.autoSetupRemote true
 
-      - name: three        
-        run: |          
+      - name: three
+        run: |
           git switch --force-create hlx/${{ github.ref_name }}
 
       - name: four
-        run: |          
+        run: |
           git commit --allow-empty -m "test"
-        
+
       - name: five
         run: |
           git push --force
-          
+
 
 
