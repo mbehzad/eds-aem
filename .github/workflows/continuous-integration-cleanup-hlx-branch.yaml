@@ -14,7 +14,9 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: "actions/checkout@something"
+
       - name: Delete hlx branch
-        uses: actions/checkout@v4
         run: |
           git push origin --delete hlx/${{ github.event.ref }}
