@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite';
-import minifyHTML from 'rollup-plugin-minify-html-literals';
+//import minifyHTML from 'rollup-plugin-minify-html-literals';
 import { generateBlockEntries, generateIconNameType } from './vite.helpers';
 import { config } from './config';
 import { resolve } from 'path';
 import { InputOption } from 'rollup';
-
-const isProd = process.env.NODE_ENV === 'production';
 
 // @ts-ignore:next line
 export default defineConfig(({ command, mode }) => {
@@ -67,7 +65,6 @@ export default defineConfig(({ command, mode }) => {
           chunkFileNames: '__chunks__/[name].[hash].js',
           entryFileNames: '[name]/[name].js',
         },
-        plugins: [isProd && minifyHTML()],
       },
     },
   };

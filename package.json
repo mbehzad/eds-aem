@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "aemUp": "aem up",
-    "build": "tsc && vite build",
+    "build": "tsc --noEmit && vite build",
     "build:watch": "run-p tsc:watch vite:watch",
     "build:doc": "node  ./tools/doc/generate.js",
     "lint:js": "eslint 'src/**/!(*-toc).{js,json,ts}'",
@@ -16,7 +16,7 @@
     "lint": "npm run lint:js",
     "lint:fix": "npm run lint:js",
     "start": "npm-run-all --parallel build:watch aemUp",
-    "tsc:watch": "tsc -w",
+    "tsc:watch": "tsc --noEmit -w",
     "vite": "vite",
     "vite:watch": "vite build -w",
     "prepare": "husky",
