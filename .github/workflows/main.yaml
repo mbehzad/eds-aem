@@ -2,9 +2,21 @@ name: Build
 on: [push]
 
 jobs:
+  echo:
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: |
+          echo "ref name: ${{ github.ref_name }}"
+          rcho "runs? ${{ startsWith(github.ref_name, 'feature/part1') }}"
+
   build:
     runs-on: ubuntu-latest
-    if: ${{ ! startsWith(github.ref_name, 'feature/part1') }}
+    if: ${{ startsWith(github.ref_name, 'feature/part1') }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
