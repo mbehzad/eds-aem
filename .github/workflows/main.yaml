@@ -12,7 +12,7 @@ jobs:
           node-version: 20
       - run: |
           echo "ref name: ${{ github.ref_name }}"
-          rcho "runs? ${{ startsWith(github.ref_name, 'feature/part1') }}"
+          echo "runs? ${{ startsWith(github.ref_name, 'feature/part1') }}"
 
   build:
     runs-on: ubuntu-latest
@@ -26,6 +26,7 @@ jobs:
       - run: |
           git config --global user.name "test"
           git config --global user.email "test@foo.bar"
+          git config --global --add push.autoSetupRemote true
           git switch --force-create hlx/${{ github.ref_name }}
           git commit --allow-empty -m "test"
           git push --force
