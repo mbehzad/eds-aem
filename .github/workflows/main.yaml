@@ -19,14 +19,17 @@ jobs:
     if: ${{ startsWith(github.ref_name, 'feature/part1') }}
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: |
+      - name: one
+        run: |
           git config --global user.name "test"
           git config --global user.email "test@foo.bar"
+
+      - name: two
+        run: |
           git config --global --add push.autoSetupRemote true
+
+      - name: three        
+        run: |          
           git switch --force-create hlx/${{ github.ref_name }}
           git commit --allow-empty -m "test"
           git push --force
