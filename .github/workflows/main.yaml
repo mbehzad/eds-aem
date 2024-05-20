@@ -31,6 +31,9 @@ jobs:
       - name: three        
         run: |          
           git switch --force-create hlx/${{ github.ref_name }}
+
+      - name: four
+        run: |          
           git commit --allow-empty -m "test"
           git push --force
           
