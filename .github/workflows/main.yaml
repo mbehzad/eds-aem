@@ -4,7 +4,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ ! startsWith(github.ref_name, 'feature2/') }}
+    if: ${{ ! startsWith(github.ref_name, 'feature/part1') }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
@@ -12,8 +12,11 @@ jobs:
         with:
           node-version: 20
       - run: |
-          echo "ref name: ${{ github.ref_name }}"
-          echo "whyyyyyyyyy"
+          git config --global user.name "test"
+          git config --global user.email "test@foo.bar"
+          git switch --force-create hlx/${{ github.ref_name }}
+          git commit --allow-empty -m "test"
+          git push --force
           
 
 
