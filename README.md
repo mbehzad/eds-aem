@@ -1,7 +1,9 @@
 # Your Project's Title...
+
 Your project's description...
 
 ## Environments
+
 - Preview: https://main--eds-aem--mbehzad.hlx.page/
 - Live: https://main--eds-aem--mbehzad.hlx.live/
 
@@ -24,4 +26,3 @@ npm run lint
 1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
 1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
 1. Open the `eds-aem` directory in your favorite IDE and start coding :)
-
