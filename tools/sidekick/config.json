@@ -1,27 +1,12 @@
 {
-    "project": "Example",
-    "plugins": [
-      {
-        "id": "library",
-        "title": "Library", 
-        "url": "/tools/sidekick/library.html",
-        "includePaths": ["**.docx**"]
-      },
-      {
-        "id": "foo",
-        "title": "Foo",
-        "event": "foo"
-      },
-      {
-        "id": "bar",
-        "title": "Bar",
-        "url": "/tools/sidekick/bar.html"
-      }
-    ],
-    "specialViews": [{
-        "title": "bla", 
-        "viewer": "/tools/sidekick/bar.html",
-        "path": "**.json"
-    }]
-  }
-  
+  "project": "Example",
+  "plugins": [
+    {
+      "id": "library",
+      "title": "Library",
+      "environments": ["edit"],
+      "url": "/tools/sidekick/library.html",
+      "includePaths": ["**.docx**"]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+name: Continuous Integration cleanup hlx branch
+
+on:
+  delete:
+    # when a non hlx branch was deleted
+    branches-ignore:
+      - 'hlx/**'
+
+jobs:
+  # when the original branch is deleted / merged,
+  # remove the shadow hlx/ branch as well
+  delete-hlx-branch:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete hlx branch
+        uses: actions/checkout@v4
+        run: |
+          git push origin --delete hlx/${{ github.event.ref }}
